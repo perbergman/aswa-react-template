@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "api",
   "version": "",
   "scripts": {
     "build": "tsc",
