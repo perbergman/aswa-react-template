@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [message, setMessage] = useState("");
   useEffect(() => {
-    fetch("http://localhost:7071/api/get-message?name=Static Web Apps")
+    fetch("/api/get-message?name=Static Web Apps")
     .then(res => res.text())
     .then(data => setMessage(data));
   }, []);
