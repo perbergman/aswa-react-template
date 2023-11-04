@@ -1,0 +1,17 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    submodules: true
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: '/build'
+      api_location: 'api'
+      output_location: '/output'
+      azure_static_web_apps_api_token: bab6fc3c153f07a12d2af64d078404b9b516703b5f0909304835f3723ac4671f4-8501ce10-baf3-474c-b791-4abf9de4c70c01e57890
+    env:
+      SKIP_DEPLOY_ON_MISSING_SECRETS: false
